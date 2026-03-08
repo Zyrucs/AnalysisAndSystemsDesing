@@ -2,16 +2,16 @@
 
 ### Folder Description
 
-- **diagrams/**
+- **[Diagrams](Diagrams/)**
   Contains the system representation diagrams such as the system structure diagram and the operational flowchart.
 
-- **charts/**
+- **[Charts](Charts/)**
   Includes charts generated from the student survey used for primary data collection.
 
-- **data/**
+- **[Data](data/)**
   Raw data collected from the survey conducted with university students.
 
-- **report/**
+- **[Report](report/)**
   Final PDF document containing the full systems analysis.
 
 ---
@@ -39,7 +39,7 @@ The analysis includes the following elements:
 - **Survey data analysis**
 - **System performance evaluation**
 
-Diagrams were created to represent:
+[Diagrams](diagrams/) were created to represent:
 
 - The structure and components of the system
 - The operational flow of resource allocation
