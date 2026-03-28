@@ -2,9 +2,9 @@
 
 # Members
 
-| Nombre | 
-|--------|
-| Matínez Gil Daniel mateo  | 
+| Names | 
+|--------| 
+| Matínez Gil Daniel Mateo | 
 | Triana Paipa Juan Camilo | 
 | Ramírez Hernández Juan Guillermo | 
 | Silva Orrego Dylan David | 
