@@ -1,0 +1,408 @@
+%------------------
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts                         % Enable \thanks
+\usepackage{cite}                                    % Numeric citations
+\usepackage[cmex10]{amsmath,amssymb}                 % Math symbols
+\usepackage{graphicx}                                % Include figures
+\usepackage{hyperref}                                % Clickable links
+\usepackage{enumitem}                                % Customized lists
+\usepackage{tikz}                                    % Diagrams and drawings
+\usepackage{tabularx}                                % Adapted for auto-wrapping
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{pgfgantt}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{lmodern}
+
+\usetikzlibrary{
+  shapes.geometric,
+  shapes.multipart,
+  arrows.meta,
+  positioning,
+  fit,
+  backgrounds,
+  decorations.pathreplacing,
+  calc
+}
+
+
+\definecolor{ecmBlue}     {HTML}{1A3C5E}
+\definecolor{ecmLightBlue}{HTML}{2E86C1}
+\definecolor{ecmGreen}    {HTML}{1E8449}
+\definecolor{ecmOrange}   {HTML}{D35400}
+\definecolor{ecmYellow}   {HTML}{F1C40F}
+\definecolor{ecmRed}      {HTML}{C0392B}
+\definecolor{ecmGray}     {HTML}{AEB6BF}
+\definecolor{ecmLight}    {HTML}{EAF2FF}
+\definecolor{riskLow}     {HTML}{27AE60}
+\definecolor{riskMedium}  {HTML}{F39C12}
+\definecolor{riskHigh}    {HTML}{C0392B}
+
+\title{\LARGE \bf Workshop No. 3: Robust System Design and Project Management \\
+\large Equipment and Connectivity Management (ECM) Platform}
+
+\author{\IEEEauthorblockN{Daniel Martínez Gil, Dylan Silva Orrego, Juan Ramírez Hérnandez, Juan Triana Paipa}
+    \IEEEauthorblockA{Dept. of Computer Engineering\\
+    Universidad Distrital Francisco Jos\'e de Caldas\\
+    dammartinezg@udistrital.edu.co, jgramirezh@udistrital.edu.co, ddsilvao@udistrital.edu.co, jctrianap@udistrital.edu.co}
+
+}
+
+\begin{document}
+\maketitle
+
+%% ------------ Abstract ------------
+\begin{abstract}
+The transition from conceptual modeling to a robust software engineering framework requires a comprehensive approach to system architecture and project execution. This document details the architectural evolution of the Equipment and Connectivity Management (ECM) platform, integrating rigorous quality standards, proactive risk mitigation, and structured management controls to support an academic community of 7,000 potential users. The outcomes establish a production-ready blueprint that guarantees system scalability, regulatory compliance, and operational sustainability before full-scale implementation.
+\end{abstract}
+
+%% ------------ Keywords ------------
+\begin{IEEEkeywords}
+System Design Refinement, Clean Architecture, Risk Management, Project Governance, Robust Engineering
+\end{IEEEkeywords}
+
+%% ------------ Sections ------------
+\section{Enhanced System Design Document}
+This section presents the comprehensive system design, transitioning the ECM platform from conceptual models to a production-ready architectural blueprint.
+
+\subsection{Executive Summary}
+The ECM platform development has evolved significantly from its initial requirement gathering phases. This summary provides a comprehensive overview of the design evolution, highlighting the integration of quality enhancements and a structured management approach to support an academic community of 7,000 users.
+
+\subsection{Robust Architecture Design}
+Building upon the Clean Architecture paradigm, the updated architectural documentation incorporates quality standards (ISO/IEC 25010) and engineering best practices. The core domain logic, implemented in Java, is decoupled from the persistence and presentation layers to ensure long-term maintainability and fault tolerance under high concurrent loads.
+
+\subsection{Risk Management Plan}
+Following the ISO 31000 framework, this detailed risk analysis identifies vulnerabilities and proposes monitoring approaches and mitigation strategies to protect institutional operational continuity.
+
+\begin{table}[h]
+\centering
+\caption{Risk Management Matrix for the ECM Platform.}
+\label{tab:risk_matrix_summary}
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{|c|>{\raggedright\arraybackslash}X|c|c|}
+\hline
+\textbf{ID} & \textbf{Risk Description} & \textbf{Prob.} & \textbf{Imp.} \\ \hline
+R01 & Server downtime during peak academic concurrent user access. & Med & High \\ \hline
+R02 & Data inconsistency during simultaneous equipment lending requests. & Low & High \\ \hline
+\end{tabularx}
+\end{table}
+
+\subsection{Quality Assurance Framework}
+To guarantee system reliability, this framework defines quality metrics, validation methods, and acceptance criteria. The backend Java ecosystem will enforce a minimum of 80\% unit test coverage for the lending domain logic.
+
+\subsection{Implementation Strategy}
+The deployment of the ECM platform will follow a phased approach, detailing the timeline and resource requirements. Initial rollout will consist of a controlled pilot with institutional technical staff before a university-wide release.
+
+\subsection{Evolution Summary}
+This subsection documents the design improvements and lessons learned from the previous workshops. The shift towards a dynamic Observer pattern for notifications was a direct result of user feedback regarding inventory visibility.
+
+\section{Project Management Documentation}
+This section establishes the governance, structural composition, and operational controls required to manage the transition of the ECM platform into a functional, production-ready system.
+
+\subsection{Project Charter}
+The Project Charter formally authorizes the ECM platform implementation to replace legacy manual lending for 7,000 potential users. The project scope encompasses a decoupled multi-tier architecture, strict institutional lending policy enforcement, and secure user data management. Success is defined by the complete elimination of concurrency conflicts and a system response time under two seconds.
+
+\subsection{Team Structure and Roles}
+The engineering team is organized under a strict accountability framework divided into four specialized domains. Project Management oversees stakeholder alignment and regulatory compliance; Backend Engineering implements the core Java lending logic and transaction locks; Frontend Engineering develops the responsive React user interface; and Quality Assurance designs automated testing pipelines to enforce an 80\% unit test coverage.
+
+\subsection{Project Timeline}
+The implementation lifecycle follows a phased progression designed to minimize technical debt and ensure thorough validation. Execution begins with environment and repository configuration, moves to core Java domain codification, and proceeds to frontend-backend API integration. The schedule concludes with a controlled pilot deployment among technical operators before the final university-wide rollout.
+
+\subsection{Resource Management Plan}
+Resource allocation is managed dynamically to maximize development capacity and infrastructural efficiency. Human resources are balanced across development layers to prevent integration bottlenecks, while technical planning provisions cloud hosting and continuous integration pipelines. Capacity forecasting guarantees that database and server infrastructure can handle peak academic concurrent traffic without performance degradation.
+
+\subsection{Communication and Control Plan}
+A rigorous communication framework ensures transparency and alignment among all institutional stakeholders. Monitoring relies on weekly technical reviews to assess milestone completion and address architectural friction early. Project control mechanisms utilize automated tracking tools against the planned baseline, generating periodic progress and quality reports for university administrative approval.
+
+\section{Visual Representations and Tools}
+This section presents the complete set of visual artifacts that support the ECM platform design, risk management, project planning, and quality assurance processes. All diagrams were produced with TikZ/PGF inside \LaTeX{} to guarantee reproducibility and version-control compatibility within the project repository.
+
+\subsection{Enhanced System Architecture Diagram}
+The diagram below reflects the robust, layered architecture of the ECM platform built upon Clean Architecture principles (ISO/IEC 25010). Three external actor groups interact with three internal tiers — Presentation, Application Logic, and Data/Integration — through clearly defined interface boundaries.
+
+\begin{figure}[h]
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tikzpicture}[
+  font=\scriptsize,
+  actor/.style={
+    draw=ecmBlue, fill=ecmBlue!12, rounded corners=3pt,
+    minimum width=1.7cm, minimum height=0.65cm,
+    align=center, text=ecmBlue, thick
+  },
+  layerlabel/.style={
+    font=\scriptsize\bfseries, align=center
+  },
+  module/.style={
+    draw=#1!70!black, fill=#1!18, rounded corners=2pt,
+    minimum width=2.6cm, minimum height=0.62cm,
+    align=center, font=\scriptsize\bfseries, text=#1!70!black, thick
+  },
+  db/.style={
+    cylinder, draw=ecmBlue!80, fill=ecmBlue!12,
+    shape border rotate=90, aspect=0.28,
+    minimum width=1.6cm, minimum height=0.9cm,
+    align=center, font=\scriptsize\bfseries
+  },
+  extmod/.style={
+    draw=#1!70!black, fill=#1!18, rounded corners=2pt,
+    minimum width=2.2cm, minimum height=0.62cm,
+    align=center, font=\scriptsize\bfseries, text=#1!70!black, thick
+  },
+  arrow/.style={-{Stealth[length=4pt]}, thick, #1},
+  dasharrow/.style={-{Stealth[length=4pt]}, thick, dashed, gray!60},
+  node distance=0.55cm and 0.7cm
+]
+
+%% ── ACTORS ───────────────────────────────────────────────────────────────────
+\node[actor] (student) at (0, 0)     {Student\\Portal};
+\node[actor] (admin)   at (0,-1.3)   {Admin\\Dashboard};
+\node[actor] (donor)   at (0,-2.6)   {Donor\\Monitor};
+
+%% ── APPLICATION LOGIC MODULES ────────────────────────────────────────────────
+\node[module=ecmLightBlue] (reqmgmt)   at (4.3, 0)    {Request\\Management};
+\node[module=ecmGreen]     (scoring)   at (4.3,-0.95)  {Scoring\\Engine};
+\node[module=ecmOrange]    (allocmgmt) at (4.3,-1.9)   {Allocation\\Management};
+\node[module=ecmBlue]     (inventory) at (4.3,-2.85)  {Inventory \&\\Asset Lifecycle};
+\node[module=ecmLightBlue] (connpool)  at (4.3,-3.8)   {Connectivity\\Pool Manager};
+\node[module=ecmGray]      (notif)     at (4.3,-4.75)  {Notification \&\\Alert Module};
+
+%% ── DATA / INTEGRATION ───────────────────────────────────────────────────────
+\node[db]                    (db)      at (8.5,-1.6)  {Relational\\DB};
+\node[extmod=ecmOrange]     (acadapi) at (8.5,-3.1)  {Academic\\Info Systems};
+\node[extmod=ecmLightBlue]  (ispapi)  at (8.5,-4.2)  {ISP\\Gateway API};
+
+%% ── LAYER BACKGROUNDS ────────────────────────────────────────────────────────
+\begin{scope}[on background layer]
+  \node[draw=ecmLightBlue, fill=ecmLightBlue!6, thick, rounded corners=5pt,
+        fit=(student)(admin)(donor),
+        inner sep=6pt,
+        label={[ecmLightBlue,font=\scriptsize\bfseries]above:Presentation Layer}]
+        (pres) {};
+  \node[draw=ecmGreen, fill=ecmGreen!5, thick, rounded corners=5pt,
+        fit=(reqmgmt)(scoring)(allocmgmt)(inventory)(connpool)(notif),
+        inner sep=6pt,
+        label={[ecmGreen,font=\scriptsize\bfseries]above:Application Logic Layer}]
+        (applogic) {};
+  \node[draw=ecmOrange, fill=ecmOrange!5, thick, rounded corners=5pt,
+        fit=(db)(acadapi)(ispapi),
+        inner sep=6pt,
+        label={[ecmOrange,font=\scriptsize\bfseries]above:Data \& Integration Layer}]
+        (datalayer) {};
+\end{scope}
+
+\draw[arrow=ecmBlue] (student.east) -- ++(0.45,0) |- (reqmgmt.west);
+\draw[arrow=ecmBlue] (admin.east)   -- ++(0.45,0) |- (allocmgmt.west);
+\draw[arrow=ecmBlue] (donor.east)   -- ++(0.45,0) |- (notif.west);
+
+\draw[arrow=ecmGreen]  (reqmgmt.east)   -| ($(db.west)!0.5!(reqmgmt.east)$) |- (db.west);
+\draw[arrow=ecmGreen]  (scoring.east)   -- (db.west |- scoring);
+\draw[arrow=ecmGreen]  (allocmgmt.east) -- (db.west |- allocmgmt);
+\draw[arrow=ecmGreen]  (inventory.east) -- (db.west |- inventory);
+\draw[arrow=ecmOrange] (connpool.east)  -- (ispapi.west |- connpool);
+\draw[arrow=ecmOrange] (reqmgmt.east)   -| ($(acadapi.west)!0.3!(reqmgmt.east)$) |- (acadapi.west);
+
+%% ── INTERNAL FLOW (dashed) ───────────────────────────────────────────────────
+\draw[dasharrow] (reqmgmt)   -- (scoring);
+\draw[dasharrow] (scoring)   -- (allocmgmt);
+\draw[dasharrow] (allocmgmt) -- (inventory);
+\draw[dasharrow] (inventory) -- (connpool);
+\draw[dasharrow] (connpool)  -- (notif);
+
+\end{tikzpicture}
+}
+\caption{Enhanced ECM System Architecture Diagram. Dashed arrows denote internal module data flow; solid arrows denote actor-to-layer and layer-to-layer communication.}
+\label{fig:architecture}
+\end{figure}
+
+\subsection{Risk Management Matrix Visualization}
+The bubble chart below maps the four identified risks on a Probability $\times$ Impact grid. Bubble area encodes overall risk severity (Probability $\times$ Impact on a 1–3 ordinal scale). Risks that fall in the upper-right quadrant require immediate mitigation.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\begin{axis} [
+  width=\linewidth, height=6.8cm,
+  xlabel={\textbf{Probability}},
+  ylabel={\textbf{Impact}},
+  xmin=0.3, xmax=3.7,
+  ymin=0.3, ymax=3.7,
+  xtick={1,2,3},
+  ytick={1,2,3},
+  xticklabels={Low,Medium,High},
+  yticklabels={Low,Medium,High},
+  grid=both,
+  grid style={line width=0.3pt, draw=gray!25},
+  major grid style={line width=0.5pt, draw=gray!45},
+  tick label style={font=\scriptsize},
+  label style={font=\scriptsize\bfseries},
+  axis on top=false,
+]
+
+\fill[riskLow!18]    (axis cs:0.3,0.3) rectangle (axis cs:2,2);
+\fill[riskMedium!18] (axis cs:2,0.3)   rectangle (axis cs:3.7,2);
+\fill[riskMedium!18] (axis cs:0.3,2)   rectangle (axis cs:2,3.7);
+\fill[riskHigh!18]   (axis cs:2,2)     rectangle (axis cs:3.7,3.7);
+
+\node[font=\tiny\bfseries, text=riskLow!65!black] at (axis cs:1.15,1.15) {LOW RISK};
+\node[font=\tiny\bfseries, text=riskMedium!65!black] at (axis cs:2.85,1.15) {MEDIUM RISK};
+\node[font=\tiny\bfseries, text=riskMedium!65!black] at (axis cs:1.15,2.85) {MEDIUM RISK};
+\node[font=\tiny\bfseries, text=riskHigh!65!black] at (axis cs:2.85,2.85) {HIGH RISK};
+
+\draw[thick, dashed, gray!50] (axis cs:0.3,0.3) -- (axis cs:3.7,3.7);
+
+\addplot[only marks, mark=*, mark size=12pt, mark options={fill=riskHigh!65, draw=riskHigh, opacity=0.80}] coordinates {(2,3)};
+\node[font=\tiny\bfseries, white] at (axis cs:2,3) {R01};
+
+\addplot[only marks, mark=*, mark size=10pt, mark options={fill=riskMedium!80, draw=riskMedium, opacity=0.80}] coordinates {(1,3)};
+\node[font=\tiny\bfseries, white] at (axis cs:1,3) {R02};
+
+\addplot[only marks, mark=*, mark size=11pt, mark options={fill=riskHigh!65, draw=riskHigh, opacity=0.80}] coordinates {(3,2)};
+\node[font=\tiny\bfseries, white] at (axis cs:3,2) {R03};
+
+\addplot[only marks, mark=*, mark size=9pt, mark options={fill=riskMedium!80, draw=riskMedium, opacity=0.80}] coordinates {(2,2)};
+\node[font=\tiny\bfseries, white] at (axis cs:2,2) {R04};
+
+\end{axis}
+\end{tikzpicture}
+
+\vspace{0.1cm}
+\begin{itemize}[noitemsep, leftmargin=1.0em, topsep=1pt]
+  \item \scriptsize \textbf{R01} — Server downtime during peak academic hours.
+  \item \scriptsize \textbf{R02} — Data inconsistency in simultaneous lending.
+  \item \scriptsize \textbf{R03} — Frontend-backend integration delays.
+  \item \scriptsize \textbf{R04} — Low user adoption of the platform.
+\end{itemize}
+\caption{Risk Management Bubble Chart — Probability vs.\ Impact.}
+\label{fig:risk_matrix}
+\end{figure}
+
+\subsection{Quality Assurance Process Flow}
+The flowchart below depicts the three-tier QA validation framework applied to every software increment of the ECM platform, from unit testing through production monitoring. Rework loops ensure that no increment advances until its tier acceptance criteria are met.
+
+\begin{figure}[h]
+\centering
+\resizebox{0.88\linewidth}{!}{
+\begin{tikzpicture}[
+  font=\scriptsize,
+  terminator/.style={
+    draw=ecmBlue, fill=ecmBlue, rounded corners=12pt,
+    minimum width=2.4cm, minimum height=0.6cm,
+    text=white, font=\scriptsize\bfseries, align=center
+  },
+  process/.style={
+    draw=ecmLightBlue!80!black, fill=ecmLightBlue!18,
+    minimum width=3.0cm, minimum height=0.65cm,
+    align=center, font=\scriptsize\bfseries
+  },
+  decision/.style={
+    diamond, draw=ecmOrange!80!black, fill=ecmOrange!18,
+    minimum width=1.8cm, minimum height=0.9cm,
+    align=center, font=\scriptsize\bfseries, aspect=2.5
+  },
+  rework/.style={
+    draw=ecmRed!70, fill=ecmRed!12,
+    minimum width=2.4cm, minimum height=0.6cm,
+    align=center, font=\scriptsize\bfseries
+  },
+  arrow/.style={-{Stealth[length=4pt]}, thick, ecmBlue!65},
+  node distance=0.55cm and 1.8cm
+]
+
+%% ── Main column ─────────────────────────────────────────────────────────────
+\node[terminator] (start)   {Code Increment\\Ready};
+\node[process,    below=of start]   (unit)    {Tier 1: Unit Tests\\($\geq$80\% coverage)};
+\node[decision,   below=of unit]    (d1)      {Pass?};
+\node[process,    below=of d1]      (int)     {Tier 2: Integration Tests\\(API contracts)};
+\node[decision,   below=of int]     (d2)      {Pass?};
+\node[process,    below=of d2]      (uat)     {Tier 3: UAT Pilot\\($<$3 min/request)};
+\node[decision,   below=of uat]     (d3)      {Accepted?};
+\node[process,    below=of d3]      (deploy)  {Deploy to Staging\\/ Production};
+\node[process,    below=of deploy]  (monitor) {Post-deploy Monitoring\\(KPIs \& Audit Logs)};
+\node[terminator, below=of monitor] (end)     {Increment\\Released};
+
+%% ── Rework column (right) ───────────────────────────────────────────────────
+\node[rework, right=1.6cm of d1]  (fix1) {Fix Unit\\Issues};
+\node[rework, right=1.6cm of d2]  (fix2) {Fix Integration\\Issues};
+\node[rework, right=1.6cm of d3]  (fix3) {Rework UI/UX\\Issues};
+
+%% ── Main flow arrows ────────────────────────────────────────────────────────
+\draw[arrow] (start)   -- (unit);
+\draw[arrow] (unit)    -- (d1);
+\draw[arrow] (d1)      -- node[left, font=\scriptsize\bfseries, text=riskLow] {Yes} (int);
+\draw[arrow] (int)     -- (d2);
+\draw[arrow] (d2)      -- node[left, font=\scriptsize\bfseries, text=riskLow] {Yes} (uat);
+\draw[arrow] (uat)     -- (d3);
+\draw[arrow] (d3)      -- node[left, font=\scriptsize\bfseries, text=riskLow] {Yes} (deploy);
+\draw[arrow] (deploy)  -- (monitor);
+\draw[arrow] (monitor) -- (end);
+
+%% ── No-path arrows ──────────────────────────────────────────────────────────
+\draw[arrow] (d1) -- node[above, font=\scriptsize\bfseries, text=ecmRed] {No} (fix1);
+\draw[arrow] (d2) -- node[above, font=\scriptsize\bfseries, text=ecmRed] {No} (fix2);
+\draw[arrow] (d3) -- node[above, font=\scriptsize\bfseries, text=ecmRed] {No} (fix3);
+
+%% ── Rework loop-back arrows ─────────────────────────────────────────────────
+\draw[arrow] (fix1) |- (unit);
+\draw[arrow] (fix2) |- (int);
+\draw[arrow] (fix3) |- (uat);
+
+\end{tikzpicture}
+}
+\caption{ECM Quality Assurance Process Flow — Three-tier validation strategy with rework loops.}
+\label{fig:qa_flow}
+\end{figure}
+
+\section{Results \& Discussion} 
+The refinement of the architecture demonstrates a structural improvement over the baseline models. Decoupling the domain layer ensures that future updates to database vendor engines or frontend components will not introduce regressions into the validated business logic. The inclusion of predictive capacity tracking further guarantees that resource constraints are identified before impacting service availability.
+
+\section{Conclusions}
+The conceptual and management frameworks developed across these initial phases provide a scalable, sustainable path toward automation. By anchoring design decisions in empirical user data and standardizing project controls, the proposed blueprint bridges the gap between academic systems design and reliable industrial implementation.
+
+\section*{Acknowledgments}
+The author thanks the Computer Engineering Program faculty at Universidad Distrital Francisco Jos\'e de Caldas for the methodological guidelines provided.
+
+%% ------------ References ------------
+\bibliographystyle{IEEEtran}
+\begin{thebibliography}{10}
+
+\bibitem{bass2021}
+L.~Bass, P.~Clements, and R.~Kazman, \emph{Software Architecture in Practice}, 4th~ed.\hskip 1em plus 0.5em minus 0.4em\relax Boston, MA: Addison-Wesley, 2021.
+
+\bibitem{martin2017}
+R.~C. Martin, \emph{Clean Architecture: A Craftsman's Guide to Software Structure and Design}, 1st~ed.\hskip 1em plus 0.5em minus 0.4em\relax Boston, MA: Prentice Hall, 2017.
+
+\bibitem{iso25010}
+International Organization for Standardization, \emph{Systems and software engineering — Systems and software Quality Requirements and Evaluation (Square) — System and software quality models}, ISO/IEC Standard 25010:2011, 2011.
+
+\bibitem{iso31000}
+International Organization for Standardization, \emph{Risk management — Guidelines}, ISO Standard 31000:2018, 2018.
+
+\bibitem{pmi2021}
+Project Management Institute, \emph{A Guide to the Project Management Body of Knowledge (PMBOK Guide)}, 7th~ed.\hskip 1em plus 0.5em minus 0.4em\relax Newtown Square, PA: Project Management Institute, 2021.
+
+\bibitem{evans2003}
+E.~Evans, \emph{Domain-Driven Design: Tackling Complexity in the Heart of Software}, 1st~ed.\hskip 1em plus 0.5em minus 0.4em\relax Boston, MA: Addison-Wesley, 2003.
+
+\bibitem{walls2022}
+C.~Walls, \emph{Spring in Action}, 6th~ed.\hskip 1em plus 0.5em minus 0.4em\relax Shelter Island, NY: Manning Publications, 2022.
+
+\bibitem{banks2023}
+A.~Banks and Eve~Porcello, \emph{Learning React: Modern Patterns for Developing React Apps}, 2nd~ed.\hskip 1em plus 0.5em minus 0.4em\relax Sebastopol, CA: O'Reilly Media, 2023.
+
+\end{thebibliography}
+
+\end{document}
